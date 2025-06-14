@@ -1,1 +1,12 @@
 alphaTOOLS Images
+
+images/alpha.headshot.png
+images/alphaAI.png
+alphaMaker-BuyAmount.png
+alphaMaker-BUyCycle.png
+alphaMaker-FundsMenu.png
+alphaMaker-RecoverFunds.png
+alphaMaker-RecoverSOL.png
+alphaMaker-WhatCan.png
+alphaMakerMainMenu.pn
+alphaMakerSettingsMenu.png
