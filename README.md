@@ -1,6 +1,8 @@
 # alphaMAKER - The Ultimate Market Maker for Solana & Pump.Fun Tokens
 
-![alphaAI](images/alpha.headshot.png){:style="display:block; margin-left:auto; margin-right:auto;"}
+<div align="center">
+  <img src="images/alpha.headshot.png" alt="alphaAI">
+</div>
 
 alphaMAKER isthe most advanced market maker and volume bot for the Solana network, designed specifically for pump.fun tokens. Unlike any other bot, alphaMAKER delivers unparalleled performance, customization, and control to boost your token's visibility and trading activity.
 
