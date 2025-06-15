@@ -15,7 +15,7 @@
     <li><strong>High Performance</strong>: Each bot processes up to 4 transactions per second. Run multiple bots to increase transaction speed (e.g., 2 bots for 8 tx/s).</li>
   </ul>
   <div style="text-align: center;">
-    <img src="images/pumpfun.png" alt="pumpfun" style="width: 50%;">
+    <img src="images/pumpfun.png" alt="pumpfun" style="width: 10%;">
   </div>
 
   <h2>How It Works</h2>
