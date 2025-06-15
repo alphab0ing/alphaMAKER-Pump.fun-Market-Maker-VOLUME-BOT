@@ -32,7 +32,7 @@
     <li><strong>Choose Your Settings</strong>: Set your primary settings. Each maker wallet is funded and then assigned a batch of additional warm wallets for the trading process. The bot will make transactions at + or - 15% of your set buy amount and will hold the tokens for a period of time randomly selected within your defined buy cycle.</li>
   </ol>
   <div style="text-align: center;">
-    <img src="images/alphaMaker-FundWallets.png" alt="fundsWallets" style="width: 50%;">
+    <img src="images/alphaMaker-fundwallets.png" alt="fundsWallets" style="width: 50%;">
   </div>
   <ol start="3">
     <li><strong>Fund Wallets</strong>: The bot will automatically determine the minimum deposit necessary based on your settings, any additional funds deposited beyond the minimum buy amount is recommended and will be divided and distributed between your makers.</li>
@@ -52,18 +52,40 @@
   <h3>More than 0.75 SOL: Cost 0.40 SOL</h3>
   <p class="note">Note: Once the initial cost has been deduced from your deposit amount the only other charges/costs from that point forward will be entirely txn fees / gas fees.</p>
 
-  <h2>What can you expect?</h2>
-  <h3>⚙️ Selected Settings</h3>
-  <p>Makers: 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Makers: 2<br>
-  Buy Amount: 0.0250 SOL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buy Amount: 0.14 SOL<br>
-  Buy Cycle: 10-20s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buy Cycle: 10-30s</p>
-  <h3>Results:</h3>
-  <p><em>Funded with - 0.25 SOL</em> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Funded with - 0.75 SOL</em><br>
-  Volume Generated: 9.375 SOL &nbsp;&nbsp;&nbsp;&nbsp; Volume Generated: 297.5 SOL<br>
-  Runtime: 30 min &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Runtime: 177 min / 2.95 hrs</p>
-  <p><em>Funded with - 1 SOL</em><br>
-  Volume Generated: 162.45 SOL<br>
-  Runtime: 406.13 min / 6.77hrs</p>
+<h2>What can you expect?</h2>
+<h3>⚙️ Selected Settings</h3>
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+  <tr>
+    <td style="padding: 10px; vertical-align: top; width: 50%;">
+      <p>Makers: 2<br>
+      Buy Amount: 0.0250 SOL<br>
+      Buy Cycle: 10-20s</p>
+    </td>
+    <td style="padding: 10px; vertical-align: top; width: 50%;">
+      <p>Makers: 2<br>
+      Buy Amount: 0.14 SOL<br>
+      Buy Cycle: 10-30s</p>
+    </td>
+  </tr>
+</table>
+<h3>Results:</h3>
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+  <tr>
+    <td style="padding: 10px; vertical-align: top; width: 50%;">
+      <p><em>Funded with - 0.25 SOL</em><br>
+      Volume Generated: 9.375 SOL<br>
+      Runtime: 30 min</p>
+    </td>
+    <td style="padding: 10px; vertical-align: top; width: 50%;">
+      <p><em>Funded with - 0.75 SOL</em><br>
+      Volume Generated: 297.5 SOL<br>
+      Runtime: 177 min / 2.95 hrs</p>
+    </td>
+  </tr>
+</table>
+<p><em>Funded with - 1 SOL</em><br>
+Volume Generated: 162.45 SOL<br>
+Runtime: 406.13 min / 6.77hrs</p>
 
   <h2>Multi-bot Larger Scale Projects</h2>
   <p>For LARGE Scale Volume it’s NEVER been easier and more customizable, you can set exactly how much Volume you want to achieve and in how much time and let alphaTOOLS do the work for you. There’s 6 alphaMAKER bots currently running on Telegram, each bot is capable of 4-5 transactions per second, if you’re looking to get a lot of volume in a very short amount of time then running multiple bots is the way to go. Below are some examples of configurations our customers have ran in the past.</p>
