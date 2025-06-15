@@ -41,6 +41,7 @@
   <br>
   <ol start="3">
     <li><strong>Fund Wallets</strong>: The bot will automatically determine the minimum deposit necessary based on your settings, any additional funds deposited beyond the minimum buy amount is recommended and will be divided and distributed between your makers.</li>
+    <br>
     <li><strong>Run</strong>: BOOST Your chart, add new holders and generate organic volume which will automatically draw attention to your token; pause or adjust your settings at any time.</li>
   </ol>
   <br>
