@@ -1,9 +1,8 @@
-# alphaMAKER - The BEST M.M. VOLUME BOT for Pump.Fun Tokens
+# alphaMAKER by alphaTOOLS
+alphaMAKER isthe most advanced market maker and volume bot for the Solana network, designed specifically for pump.fun tokens. Unlike any other bot, alphaMAKER delivers unparalleled performance, customization, and control to boost your token's visibility and trading activity.
 <div align="center" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
   <img src="images/alphaAI-Chart.png" alt="alphaAI" style="width: 50%;">
 </div>
-alphaMAKER isthe most advanced market maker and volume bot for the Solana network, designed specifically for pump.fun tokens. Unlike any other bot, alphaMAKER delivers unparalleled performance, customization, and control to boost your token's visibility and trading activity.
-
 ## Why Choose alphaMAKER?
 
 - **Realistic Trading Activity**: Each maker uses warm wallets with extensive trading histories, indistinguishable from real users. This triggers trending algorithms on DEXs and boosts your token’s “excitement” factor.
@@ -19,7 +18,6 @@ alphaMAKER isthe most advanced market maker and volume bot for the Solana networ
 - **High Performance**: Each bot processes up to 4 transactions per second. Run multiple bots to increase transaction speed (e.g., 2 bots for 8 tx/s).
   
 ![pumpfun](images/pumpfun.png)
-
 
 ## How It Works
 
