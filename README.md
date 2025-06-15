@@ -1,7 +1,5 @@
 <div align="center" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-  <img src="images/pumpfun.png" style="width: 25%;">
   <img src="images/alphaAI-Chart.png" alt="alphaAI" style="width: 50%;">
-  <img src="images/pumpfun.png" alt="pumpfun-right" style="width: 25%;">
 </div>
 
 # alphaMAKER - The Ultimate Market Maker for Solana & Pump.Fun Tokens
