@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>alphaMAKER README</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
-    h1, h2, h3 { color: #24292e; }
-    p, li { color: #333; }
-    ul { padding-left: 20px; }
-    a { color: #0366d6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .note { font-style: italic; color: #555; }
-    .emoji { font-size: 1.2em; }
-  </style>
-</head>
-<body>
+
   <h1>alphaMAKER by alphaTOOLS</h1>
   <p>alphaMAKER is the most advanced market maker and volume bot for the Solana network, designed specifically for pump.fun tokens. Unlike any other bot, alphaMAKER delivers unparalleled performance, customization, and control to boost your token's visibility and trading activity.</p>
   <div style="text-align: center;">
