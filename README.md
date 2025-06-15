@@ -36,7 +36,7 @@
   </ol>
   <br>
   <div style="text-align: center;">
-    <img src="images/alphaMaker-fundwallets.png" alt="fundsWallets" style="width: 50%;">
+    <img src="images/alphaMaker-fundwallets.png" alt="fundWallets" style="width: 50%;">
   </div>
   <br>
   <ol start="3">
