@@ -1,200 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="alphaMAKER: The ultimate Solana market maker and pump.fun volume bot. Boost token visibility with AI-powered trading tools from alphaTOOLS.">
-  <meta name="keywords" content="Solana market maker, pump.fun volume bot, alphaMAKER, alphaTOOLS, Solana token tools, crypto trading bot, token volume booster, AI trading bot">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="alphaTOOLS">
-  <title>alphaMAKER - Solana Market Maker & Pump.Fun Volume Bot</title>
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="alphaMAKER by alphaTOOLS - Solana Market Maker">
-  <meta property="og:description" content="Supercharge your Solana tokens with alphaMAKER, the leading pump.fun volume bot and market maker. AI-powered, customizable, and cost-effective.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://alphatools.pro">
-  <meta property="og:image" content="https://alphatools.pro/images/alphaAI-Chart.png">
-  <!-- Twitter Card Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="alphaMAKER - Solana Market Maker & Pump.Fun Volume Bot">
-  <meta name="twitter:description" content="Boost your Solana tokens with alphaMAKER, the ultimate pump.fun volume bot. Join alphaTOOLS today!">
-  <meta name="twitter:image" content="https://alphatools.pro/images/alphaAI-Chart.png">
-  <meta name="twitter:site" content="@alphat00ls">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background-color: #2F4F7F;
-      font-family: 'Arial', sans-serif;
-      color: #FFFFFF;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "alphaMAKER",
-    "description": "alphaMAKER is the leading Solana market maker and pump.fun volume bot, designed to boost token visibility with AI-powered trading tools.",
-    "brand": {
-      "@type": "Brand",
-      "name": "alphaTOOLS"
-    },
-    "url": "https://alphatools.pro",
-    "image": "https://alphatools.pro/images/alphaAI-Chart.png",
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "SOL",
-      "price": "0.15",
-      "priceValidUntil": "2026-06-15",
-      "availability": "https://schema.org/InStock",
-      "url": "https://alphatools.pro"
-    }
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alphaT00LS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #2a2a2a;
+            color: #ffffff;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.hidden {
+            transform: translateX(-250px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #3498db;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.2s;
+        }
+
+        .sidebar ul li a:hover {
+            color: #3498db;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 40px;
+            flex-grow: 1;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .hero img {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-250px);
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
 </head>
-<body class="min-h-screen">
-  <div class="mx-auto my-8 px-4 sm:px-6 lg:px-8 max-w-4xl">
-    <h1 class="text-4xl font-bold text-center text-white mb-6">alphaMAKER: The Ultimate Solana Market Maker</h1>
-    <p class="text-lg text-gray-200 text-center mb-8">Supercharge your Solana tokens with <strong>alphaMAKER</strong>, the premier pump.fun volume bot and market maker. Designed for token developers and traders, alphaMAKER leverages AI-powered trading to skyrocket visibility, trigger trending algorithms, and drive organic volume. Join the <strong>alphaTOOLS</strong> revolution today!</p>
-    
-    <div class="flex justify-center items-center gap-2 mb-8">
-      <img src="images/pumpfun.png" alt="pump.fun logo left" class="w-[10%] sm:w-[20%]">
-      <img src="images/alphaAI-Chart.png" alt="alphaMAKER chart" class="w-3/4 sm:w-1/2">
-      <img src="images/pumpfun.png" alt="pump.fun logo right" class="w-[10%] sm:w-[20%]">
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <div class="logo">alphaT00LS</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Ask AlphaAI</a></li>
+            <li><a href="#">alphaMAK3R</a></li>
+            <li><a href="#">alphaMAKER v2.0</a></li>
+            <li><a href="#">alphaRAIDER</a></li>
+            <li><a href="#">alphaTUNES</a></li>
+            <li><a href="#">Whale Room Supervisor</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Roadmap</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="hero">
+            <img src="/images/alphaAI.png" alt="AlphaAI Robot">
+            <h1>Welcome to alphaT00LS</h1>
+            <p>Explore our suite of cutting-edge tools designed to empower your journey in the digital world. From AI-driven insights to advanced automation, alphaT00LS has you covered.</p>
+        </div>
     </div>
 
-    <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Why Choose alphaMAKER for Solana Tokens?</h2>
-    <ul class="list-disc pl-6 text-gray-200 space-y-2">
-      <li><strong>Realistic Trading Activity</strong>: Warm wallets with rich trading histories mimic real users, boosting your token’s “excitement” on DEXs.</li>
-      <li><strong>Scalable Makers</strong>: Deploy multiple makers to amplify volume and attract new holders.</li>
-      <li><strong>alphaAI-Powered Customization</strong>: AI tailors trading settings to your token, with real-time adjustments for maximum impact.</li>
-      <li><strong>Full Control</strong>: Pause, resume, or stop anytime. Recover funds instantly.</li>
-      <li><strong>Cost-Effective</strong>: Low upfront costs, with only transaction fees after funding. Profit from upward trends!</li>
-      <li><strong>High Performance</strong>: Up to 4 transactions/second per bot, scalable to 8+ tx/s with multiple bots.</li>
-    </ul>
-    <div class="flex justify-center my-8">
-      <img src="images/pumpfun.png" alt="pump.fun logo" class="w-[10%] sm:w-[20%]">
-    </div>
-
-    <h2 class="text-2xl font-semibold text-white mt-8 mb-4">How alphaMAKER Works</h2>
-    <div class="flex justify-center my-6">
-      <img src="images/alphaMakerMainMenu.png" alt="alphaMAKER main menu" class="w-3/4 sm:w-1/2">
-    </div>
-    <ol class="list-decimal pl-6 text-gray-200 space-y-4">
-      <li><strong>Set Your Token CA</strong>: Enter the token address to target your chart.</li>
-    </ol>
-    <div class="flex justify-center my-6">
-      <img src="images/alphaMakerSettingsMenu.png" alt="alphaMAKER settings menu" class="w-3/4 sm:w-1/2">
-    </div>
-    <ol start="2" class="list-decimal pl-6 text-gray-200 space-y-4">
-      <li><strong>Choose Your Settings</strong>: Customize settings for each maker wallet, funded with warm wallets for realistic trading. Transactions vary ±15% of your buy amount, held for a random period within your buy cycle.</li>
-    </ol>
-    <div class="flex justify-center my-6">
-      <img src="images/alphaMaker-FundWallets.png" alt="alphaMAKER fund wallets" class="w-3/4 sm:w-1/2">
-    </div>
-    <ol start="3" class="list-decimal pl-6 text-gray-200 space-y-4">
-      <li><strong>Fund Wallets</strong>: The bot calculates the minimum deposit based on settings. Extra funds are distributed across makers for maximum impact.</li>
-      <li><strong>Run</strong>: Boost your chart, add holders, and generate organic volume. Pause or tweak settings anytime.</li>
-    </ol>
-    <div class="flex justify-center my-6">
-      <img src="images/alphaMaker-RecoverFunds.png" alt="alphaMAKER recover funds" class="w-3/4 sm:w-1/2">
-    </div>
-    <ol start="5" class="list-decimal pl-6 text-gray-200 space-y-4">
-      <li><strong>Recover</strong>: Withdraw remaining SOL/tokens anytime, minus minimal transaction fees.</li>
-    </ol>
-
-    <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Pricing for alphaMAKER</h2>
-    <p class="text-gray-200 mb-4">Pricing is based on SOL used to fund wallets, covering all makers and warm wallets until funds are withdrawn.</p>
-    <ul class="list-disc pl-6 text-gray-200 space-y-2">
-      <li><strong>0.25 SOL or less</strong>: 0.15 SOL</li>
-      <li><strong>0.75 SOL or less</strong>: 0.30 SOL</li>
-      <li><strong>More than 0.75 SOL</strong>: 0.40 SOL</li>
-    </ul>
-    <p class="text-gray-300 italic mt-4">Note: After initial costs, only transaction/gas fees apply.</p>
-
-    <h2 class="text-2xl font-semibold text-white mt-8 mb-4">What to Expect from alphaMAKER</h2>
-    <h3 class="text-xl font-medium text-white mb-2">Selected Settings</h3>
-    <table class="w-full border-collapse mb-6">
-      <tr>
-        <td class="p-4 w-1/2">
-          <p class="text-gray-200">Makers: 2<br>Buy Amount: 0.0250 SOL<br>Buy Cycle: 10-20s</p>
-        </td>
-        <td class="p-4 w-1/2">
-          <p class="text-gray-200">Makers: 2<br>Buy Amount: 0.14 SOL<br>Buy Cycle: 10-30s</p>
-        </td>
-      </tr>
-    </table>
-    <h3 class="text-xl font-medium text-white mb-2">Results</h3>
-    <table class="w-full border-collapse mb-6">
-      <tr>
-        <td class="p-4 w-1/2">
-          <p class="text-gray-200"><em>Funded with 0.25 SOL</em><br>Volume Generated: 9.375 SOL<br>Runtime: 30 min</p>
-        </td>
-        <td class="p-4 w-1/2">
-          <p class="text-gray-200"><em>Funded with 0.75 SOL</em><br>Volume Generated: 297.5 SOL<br>Runtime: 177 min / 2.95 hrs</p>
-        </td>
-      </tr>
-    </table>
-    <p class="text-gray-200"><em>Funded with 1 SOL</em><br>Volume Generated: 162.45 SOL<br>Runtime: 406.13 min / 6.77hrs</p>
-
-    <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Scale Your Success with alphaMAKER</h2>
-    <p class="text-gray-200 mb-4">For massive volume, alphaMAKER’s six Telegram bots deliver 4–5 transactions/second each. Customize your volume goals and timeline with ease.</p>
-    <h3 class="text-xl font-medium text-white mb-2">Example 1</h3>
-    <p class="text-gray-200">User funded 3 SOL for 3 hours of max volume:<br>
-    Configuration: 3 instances.<br>
-    Instance 1: 4 makers, 0.05 SOL, 5–10s.<br>
-    Instance 2: 4 makers, 0.04 SOL, 3–6s.<br>
-    Instance 3: 3 makers, 0.03 SOL, 2–4s.<br>
-    Volume: ~$616,896 (15% slippage, 20% chart movement).</p>
-    <h3 class="text-xl font-medium text-white mb-2 mt-4">Example 2</h3>
-    <p class="text-gray-200">Test with 6 SOL: 4 bots at 1–3s cycles generated 2.03M in volume in 1 hour. Cost: 1.5 SOL (bots) + 1.34 SOL (fees). Recovered 3 SOL+.<br>
-    Costs (1–3s cycles):<br>
-    15 min: 0.334125 SOL ($60.14)<br>
-    30 min: 0.66825 SOL ($120.85)<br>
-    60 min: 1.3365 SOL ($240.57)<br>
-    Volume Generated:<br>
-    15 min: 2819.25 SOL ($507,465)<br>
-    30 min: 5638.5 SOL ($1,014,930)<br>
-    60 min: 11277 SOL ($2,029,860)</p>
-    <p class="text-gray-300 italic mt-4">Note: Results vary with slippage and chart movement.</p>
-
-    <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Get Started with alphaMAKER Today</h2>
-    <p class="text-gray-200 mb-4">Join the alphaTOOLS community and supercharge your Solana tokens with the best pump.fun volume bot. Access our Telegram bots or community for instant setup.</p>
-    <p class="text-gray-200">
-      <span class="text-lg">📢</span> Community: <a href="https://t.me/alphat00ls" class="text-blue-300 hover:underline">t.me/alphat00ls</a><br>
-      <span class="text-lg">📨</span> Message: <a href="https://t.me/alphab0ing" class="text-blue-300 hover:underline">@alphab0ing</a><br>
-      <span class="text-lg">🤖</span> Bots:<br>
-      <a href="https://t.me/alphaMaker1_bot" class="text-blue-300 hover:underline">@alphaMaker1_bot</a> |
-      <a href="https://t.me/alphaMaker2_bot" class="text-blue-300 hover:underline">@alphaMaker2_bot</a> |
-      <a href="https://t.me/alphaMaker3_bot" class="text-blue-300 hover:underline">@alphaMaker3_bot</a> |
-      <a href="https://t.me/alphaMaker4_bot" class="text-blue-300 hover:underline">@alphaMaker4_bot</a> |
-      <a href="https://t.me/alphaMaker5_bot" class="text-blue-300 hover:underline">@alphaMaker5_bot</a> |
-      <a href="https://t.me/alphaMaker6_bot" class="text-blue-300 hover:underline">@alphaMaker6_bot</a>
-    </p>
-
-    <h2 class="text-2xl font-semibold text-white mt-8 mb-4">What’s Next for alphaTOOLS?</h2>
-    <h3 class="text-xl font-medium text-white mb-2"><a href="https://t.me/alphaMAKERv2_bot" class="text-blue-300 hover:underline">alphaMAKER-2.0</a> <em>(Beta)</em></h3>
-    <p class="text-gray-200">Now in testing, alphaMAKER-2.0 includes a FOMO Strategy to drive green candles, attract buyers, and maximize profits by leveraging liquidity.</p>
-    <h3 class="text-xl font-medium text-white mb-2 mt-4"><a href="https://t.me/fbraiderbot" class="text-blue-300 hover:underline">alphaRAIDER</a> <em>(Beta)</em></h3>
-    <p class="text-gray-200">A unique bot for Telegram groups, alphaRAIDER organizes Facebook link raids, ranks groups, and boosts token visibility with ad-supported banners.</p>
-    <h3 class="text-xl font-medium text-white mb-2 mt-4">$ALPHATOOLS Solana Token</h3>
-    <p class="text-gray-200">The <a href="https://t.me/alphat00ls" class="text-blue-300 hover:underline">alphaTOOLS</a> token launch is coming soon. Join our <a href="https://t.me/alphat00ls" class="text-blue-300 hover:underline">community</a> for updates!</p>
-    <p class="text-gray-200 text-center text-lg font-semibold mt-6">🔥 <a href="https://t.me/alphat00ls" class="text-blue-300 hover:underline">alphaTOOLS</a>: The ultimate tools for Solana meme coin devs and traders! 🚀</p>
-
-    <h2 class="text-2xl font-semibold text-white mt-12 mb-4">Contact Us</h2>
-    <p class="text-gray-200 mb-4">Ready to boost your token with alphaMAKER? Reach out to the alphaTOOLS team!</p>
-    <ul class="list-none pl-0 text-gray-200 space-y-2">
-      <li><strong>Email</strong>: <a href="mailto:alphat00ls@aol.com" class="text-blue-300 hover:underline">alphat00ls@aol.com</a></li>
-      <li><strong>Telegram Community</strong>: <a href="https://t.me/alphat00ls" class="text-blue-300 hover:underline">t.me/alphat00ls</a></li>
-      <li><strong>Telegram ID</strong>: <a href="https://t.me/alphab0ing" class="text-blue-300 hover:underline">@alphab0ing</a></li>
-      <li><strong>X</strong>: <a href="https://x.com/alphat00ls" class="text-blue-300 hover:underline">@alphat00ls</a></li>
-    </ul>
-  </div>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
